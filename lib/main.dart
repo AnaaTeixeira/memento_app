@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
+import 'form_user.dart';
+import 'form_care.dart';
 
 void main() {
-  runApp(Memento());
+  //runApp(MyUser());
+  //runApp(UserProfile());
+  runApp(MyCare());
 }
 
 class Memento extends StatelessWidget {
@@ -22,12 +26,38 @@ class MyHomePage extends StatelessWidget {
           title: Text("Memento"),
         ),
         body: Center(
-            child: Text("Welcome to Memento")) // This trailing comma makes auto-formatting nicer for build methods.
-    );
+            child: Text(
+                "Welcome to Memento")) // This trailing comma makes auto-formatting nicer for build methods.
+        );
   }
 }
 
 
 
+class MyUser extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Coding with Curry',
+      theme: ThemeData(
+        primarySwatch: Colors.teal,
+      ),
+      home: FormUser(),
+    );
+  }
+}
 
+
+class MyCare extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Coding with Curry',
+      theme: ThemeData(
+        primarySwatch: Colors.teal,
+      ),
+      home: FormScreenCare(),
+    );
+  }
+}
 
